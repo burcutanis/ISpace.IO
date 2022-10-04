@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TVSeries</title>
+
+  <style>
+  {
+     box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* Style the header */
+  .header {
+    padding: 0;
+    text-align: left;
+  }
+
+
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+   float: left;
+   width: 10%;
+  }
+
+  /* Right column */
+  .rightcolumn {
+     float: left;
+     width: 80%;
+     padding-left: 62px;
+  }
+
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+     .leftcolumn, .rightcolumn {   
+       width: 100%;
+       padding: 0;
+     }
+  }
+
+
+ul.tip1 {
+  border-left: 5px solid red;
+  background-color: #f1f1f1;
+  padding: 5px 5px;
+}
+
+ul.tip2 {
+  list-style-type: none;
+  margin: 1;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  <!---background: #3399ff; --->
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  <!---background: #3399ff; --->
+  background: #3399ff;
+}
+
+ul li a {
+  display: block;
+  color: #000;
+  padding: 3px 10px;
+  text-decoration: none;
+
+  <!---background: #cce5ff;--->
+  margin: 1;
+  border-left: 5px solid red;
+  background: #cce5ff;
+}
+
+/* Change the link color on hover */
+ul li a:hover {
+  background-color: red;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="row">
+  <div class="leftcolumn">
+    <ul>
+            <li><a href="TvSeriesList.php" target="iframe_tvs">List Tv Series</a></li>
+      <li><a href="TvSeriesAdd.php" target="iframe_tvs">Add Tv Series</a></li>
+      <li><a href="TvSeries_delete.php" target="iframe_tvs">Delete Tv Series</a></li>
+      <li><a href="TvSeries_GenreListRelationship.php" target="iframe_tvs" >TvSeries-Genres List</a></li>
+      <li><a href="TvSeries_GenreAddRelationship.php" target="iframe_tvs" >TvSeries-Genre Add</a></li>
+      <li><a href="TvSeries_GenreDeleteRelationship.php"  target="iframe_tvs" >TvSeries-Genre Delete</a></li>
+      <li><a href="TvSeries_ActorListRelationship.php" target="iframe_tvs" >TvSeries-Actors List</a></li>
+      <li><a href="TvSeries_ActorAddRelationship.php" target="iframe_tvs" >TvSeries-Actor Add</a></li>
+      <li><a href="TvSeries_ActorDeleteRelationship.php" target="iframe_tvs" >TvSeries-Actor Delete</a></li>
+      <li><a href="TvSeries_DirectorListRelationship.php" target="iframe_tvs" >TvSeries-Directors List</a></li>
+      <li><a href="TvSeries_DirectorAddRelationship.php" target="iframe_tvs">TvSeriesDirector Add</a></li>
+      <li><a href="TvSeries_DirectorDeleteRelationship.php" target="iframe_tvs">TvSeries-Director Delete</a></li>
+      <li><a href="TvSeries_EpisodeListRelationship.php" target="iframe_tvs" >TvSeries-Episodes List</a></li>
+      <li><a href="TvSeries_EpisodeAddRelationship.php" target="iframe_tvs" >TvSeries-Episode Add</a></li>
+      <li><a href="TvSeries_EpisodeDeleteRelationship.php" target="iframe_tvs" >TvSeries-Episode Delete</a></li>
+      <li><a href="Actorslist.php" target="iframe_tvs">Actors List</a> </li>
+      <li><a href="Actors_Add.php" target="iframe_tvs">Actor Add</a> </li>
+      <li><a href="Actors_delete.php" target="iframe_tvs">Actor Delete</a> </li>
+      <li><a href="DirectorList.php" target="iframe_tvs">Director List</a> </li>
+      <li><a href="Director_Add.php" target="iframe_tvs">Director Add</a> </li>
+      <li><a href="Director_delete.php" target="iframe_tvs">Director Delete</a> </li>
+      <li><a href="GenreList.php" target="iframe_tvs">Genre List</a> </li>
+      <li><a href="GenreAdd.php" target="iframe_tvs">Genre Add</a> </li>
+      <li><a href="GenreDelete.php" target="iframe_tvs">Genre Delete</a> </li>
+     
+
+    </ul>
+
+          
+
+          
+    </ul>
+
+  
+  </div>
+
+  <div class="rightcolumn">
+          <iframe  name="iframe_tvs" height="900px" width="100%" title="Iframe Example"></iframe>
+
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

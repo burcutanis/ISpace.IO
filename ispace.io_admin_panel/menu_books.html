@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BooksPanel</title>
+
+  <style>
+* {
+     box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* Style the header */
+  .header {
+    padding: 10px;
+    text-align: left;
+  }
+
+
+ /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+   float: left;
+   width: 10%;
+  }
+
+  /* Right column */
+  .rightcolumn {
+     float: left;
+     width: 85%;
+     padding-left: 50px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+     .leftcolumn, .rightcolumn {   
+       width: 100%;
+       padding: 0;
+     }
+  }
+
+
+ul.tip1 {
+  border-left: 5px solid red;
+  background-color: #f1f1f1;
+  padding: 5px 5px;
+}
+
+ul.tip2 {
+  list-style-type: none;
+  margin: 1;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  <!---background: #3399ff; --->
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  <!---background: #3399ff; --->
+  background: #3399ff;
+}
+
+ul li a {
+  display: block;
+  color: #000;
+  padding: 3px 10px;
+  text-decoration: none;
+
+  <!---background: #cce5ff;--->
+  margin: 1;
+  border-left: 5px solid red;
+  background: #cce5ff;
+}
+
+/* Change the link color on hover */
+ul li a:hover {
+  background-color: red;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+      <ul>
+
+        <li> <a href="BooksList.php" target="iframe_books">List Books</a> </li>
+        <li> <a href="Books_Add.php" target="iframe_books">Add Books</a> </li>
+        <li> <a href="Books_delete.php" target="iframe_books">Delete Books</a> </li>
+        <li> <a href="BooksAuthors_Add.php" target="iframe_books">Add Authors</a> </li>
+        <li> <a href="BooksAuthors_List.php" target="iframe_books">List Authors</a> </li>
+        <li> <a href="BooksAuthors_Delete.php" target="iframe_books">Delete Authors</a> </li>
+        <li> <a href="Books_AuthorsAddRelationship.php" target="iframe_books">Add Authors to Books</a> </li>
+        <li> <a href="Books_AuthorListRelationship.php" target="iframe_books">List Books With Authors</a> </li>
+        <li> <a href="Books_AuthorsDeleteRelationship.php" target="iframe_books">Delete Authors from Books</a> </li>
+      
+     
+      </ul>
+
+  </div>
+
+  <div class="rightcolumn">
+          <iframe  name="iframe_books" height="900px" width="100%" title="Iframe books"></iframe>
+
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

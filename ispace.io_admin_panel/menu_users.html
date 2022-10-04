@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USER PANEL</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  
+  <style>
+  {
+     box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .header {
+    padding: 0;
+    text-align: left;
+  }
+
+
+  /* Create two unequal columns that floats next to each other */
+  .leftcolumn {   
+   float: left;
+   width: 10%;
+   padding: 0;
+  }
+
+  .rightcolumn {
+     float: left;
+     width: 85%;
+     padding-left: 62px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+     .leftcolumn, .rightcolumn {   
+       width: 100%;
+       padding: 0;
+     }
+  }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  <!---background: #3399ff; --->
+  background: #3399ff;
+}
+
+ul li a {
+  display: block;
+  color: #000;
+  padding: 3px 10px;
+  text-decoration: none;
+
+  <!---background: #cce5ff;--->
+  margin: 1;
+  border-left: 5px solid red;
+  background: #cce5ff;
+}
+
+/* Change the link color on hover */
+ul li a:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="row">
+  <div class="leftcolumn">
+    <ul>
+    
+  <li> <a href="UsersList.php" target="iframe_b">List Users</a> </li>
+          <li> <a href="User_add.php" target="iframe_b">Add User</a> </li>
+          <li> <a href="User_delete.php" target="iframe_b">Delete User</a> </li>
+          <li> <a href="User_voteTvSeriesList.php" target="iframe_b">User vote TvSeries List</a> </li>
+          <li> <a href="User_watchEpisodeList.php" target="iframe_b">User watch Episode List</a>  </li>
+          <li> <a href="User_voteMoviesList.php" target="iframe_b">User vote Movies List</a> </li>
+          <li> <a href="User_likeMusicsList.php" target="iframe_b">User like Musics List</a> </li>
+          <li> <a href="User_likeBooksList.php" target="iframe_b">User like Books List</a> </li>         
+          <li> <a href="User_likeArtworksList.php" target="iframe_b">User like Artworks List</a> </li>
+    
+    </ul>
+
+  </div>
+  <div class="rightcolumn">
+          <iframe  name="iframe_b" height="900px" width="100%" title="Iframe users"></iframe>
+
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

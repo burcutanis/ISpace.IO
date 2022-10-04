@@ -1,0 +1,138 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+:root {
+  --background-purple: #1B1227;
+  --text-gray: #BFCBCD;
+  --text-white: #FFFFFF;
+  --blue-highlight: #66FFF6;
+  --button-highlight: #2E4D5B;
+  --light-blue: #A7C6FF;
+  --black: #000000;
+  --gold: #FFE070;
+  --movies: #66FFF6;
+  --tvSeries: #A7C6FF;
+  --music: #7B59FF;
+  --books: #A03ADB;
+  --artworks: #FF4FA2;
+
+  --gradient: linear-gradient(to right, var(--movies), var(--tvSeries), var(--music), var(--books), var(--artworks));
+
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #1B1227;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #BFCBCD;
+  text-decoration: none;
+}
+
+  /* Style the header */
+  .header {
+    padding: 10px;
+    text-align: left;
+  }
+
+
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+   float: left;
+   width: 10%;
+
+  }
+
+  /* Right column */
+  .rightcolumn {
+     float: left;
+     width: 85%;
+     padding-left: 65px;
+  }
+
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+     .leftcolumn, .rightcolumn {
+       width: 100%;
+       padding: 0;
+     }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of  next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+        }
+  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: var(--text-white);
+  padding: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: var(--button-highlight);
+  color: white;
+}
+
+.row .leftcolumn .Up h3 {
+  --border-width: 4px;
+  --border-radius: 20px;
+
+  background: var(--gradient);
+  padding: 13px 30px;
+  border-style: none;
+  position: relative;
+  border-radius: var(--border-radius);
+  z-index: 1;
+  width: 200px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.Up h3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: calc(100% - calc(var(--border-width)*2));
+  height: calc(100% - calc(var(--border-width)*2));
+  background: #3D3647;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: -1;
+}
